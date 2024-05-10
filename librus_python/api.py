@@ -1,8 +1,10 @@
-import requests
-from requests.cookies import RequestsCookieJar
-from urllib.parse import urlparse, urljoin
 import logging
+from urllib.parse import urlparse, urljoin
+
+import requests
 from bs4 import BeautifulSoup
+from requests.cookies import RequestsCookieJar
+
 from librus_python.config import Config
 
 

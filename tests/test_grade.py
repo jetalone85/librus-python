@@ -1,6 +1,8 @@
-import pytest
 from unittest.mock import Mock, patch
+
+import pytest
 from bs4 import BeautifulSoup
+
 from librus_python.resources import grade
 
 

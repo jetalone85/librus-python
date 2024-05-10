@@ -1,7 +1,8 @@
 import unittest
 from unittest.mock import patch, MagicMock
-from requests.cookies import RequestsCookieJar
+
 from bs4 import BeautifulSoup
+from requests.cookies import RequestsCookieJar
 
 from librus_python.api import Librus
 

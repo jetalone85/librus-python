@@ -1,7 +1,9 @@
-import pytest
-from librus_python.resources.inbox import Inbox
-from bs4 import BeautifulSoup
 from unittest.mock import MagicMock
+
+import pytest
+from bs4 import BeautifulSoup
+
+from librus_python.resources.inbox import Inbox
 
 
 @pytest.fixture
