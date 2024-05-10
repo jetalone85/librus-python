@@ -67,8 +67,9 @@ are `DEBUG`, `INFO`, `WARNING`, `ERROR`, and `CRITICAL`:
 poetry run python main.py --log LEVEL --command COMMAND
 ```
 
-Replace LEVEL with your preferred logging level (DEBUG, INFO, WARNING, ERROR, CRITICAL) and COMMAND with one of the
-supported operations (absences, inbox, message, grades). If querying a specific message, include --message_id ID.
+Replace `LEVEL` with your preferred logging level (`DEBUG`, `INFO`, `WARNING`, `ERROR`, `CRITICAL`) and `COMMAND` with
+one of the supported operations (absences, inbox, message, grades). If querying a specific message,
+include `--message_id ID`.
 
 ## License
 
