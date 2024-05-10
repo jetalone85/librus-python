@@ -35,7 +35,7 @@ class Inbox:
             raise Exception("No confirmation message found")
         return message
 
-    def get_message(self, folder_id, message_id):
+    def get_message(self, folder_id=5, message_id=0):
         """
         Fetches and processes a specific message.
 
