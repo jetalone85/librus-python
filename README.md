@@ -64,8 +64,11 @@ You can also specify the logging level with the `--log` argument. Available leve
 are `DEBUG`, `INFO`, `WARNING`, `ERROR`, and `CRITICAL`:
 
 ```bash
-poetry run python main.py --log INFO
+poetry run python main.py --log LEVEL --command COMMAND
 ```
+
+Replace LEVEL with your preferred logging level (DEBUG, INFO, WARNING, ERROR, CRITICAL) and COMMAND with one of the
+supported operations (absences, inbox, message, grades). If querying a specific message, include --message_id ID.
 
 ## License
 
