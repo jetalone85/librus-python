@@ -11,7 +11,7 @@ It enables users to authenticate and fetch details such as absences, grades, and
 
 ## Prerequisites
 
-Ensure you have Python 3.6+ and Poetry installed on your machine to handle dependencies and run the project.
+Ensure you have Python 3.11+ and Poetry installed on your machine to handle dependencies and run the project.
 
 ## Installation
 
@@ -33,8 +33,10 @@ poetry install
 
 Set up the necessary environment variables in your system:
 
+```text
 LIBRUS_LOGIN: Your Librus Synergia login username.
 LIBRUS_PASSWORD: Your Librus Synergia password.
+```
 
 For Unix-based systems, you can set these variables like this:
 
