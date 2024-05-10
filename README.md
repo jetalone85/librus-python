@@ -61,7 +61,7 @@ poetry run python main.py
 ```
 
 You can also specify the logging level with the `--log` argument. Available levels
-are `DEBUG`, `INFO`, `WARNING`, `ERRO`R`, and `CRITICAL`:
+are `DEBUG`, `INFO`, `WARNING`, `ERROR`, and `CRITICAL`:
 
 ```bash
 poetry run python main.py --log INFO
