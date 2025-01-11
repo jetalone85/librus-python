@@ -1,9 +1,12 @@
-name: Bump Version
+name: Bump Version & Create Release
 
 on:
   push:
     branches:
       - main
+
+permissions:
+  contents: write
 
 jobs:
   bump-version:
@@ -12,6 +15,8 @@ jobs:
     steps:
       - name: Check out code
         uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up Python
         uses: actions/setup-python@v4

@@ -34,4 +34,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: jetalone/librus-python:${{ github.ref_name }}
+          tags: jetalone/librus-python:${{ github.ref_name#'v' }}
