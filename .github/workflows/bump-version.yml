@@ -53,7 +53,7 @@ jobs:
         with:
           token: ${{ secrets.PAT_TOKEN }}
           tag: v${{ env.NEW_VERSION }}
-          releaseName: "v${{ env.NEW_VERSION }}"
+          name: "v${{ env.NEW_VERSION }}"
           draft: false
           prerelease: false
           body: "Automagic release of version ${{ env.NEW_VERSION }}."
