@@ -49,12 +49,11 @@ jobs:
           git push origin v${{ env.NEW_VERSION }}
 
       - name: Create GitHub release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: ncipollo/release-action@v1
         with:
-          tag_name: v${{ env.NEW_VERSION }}
-          release_name: "v${{ env.NEW_VERSION }}"
+          token: ${{ secrets.GITHUB_TOKEN }}
+          tag: v${{ env.NEW_VERSION }}
+          releaseName: "v${{ env.NEW_VERSION }}"
           draft: false
           prerelease: false
           body: "Automagic release of version ${{ env.NEW_VERSION }}."
