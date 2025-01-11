@@ -51,7 +51,7 @@ jobs:
       - name: Create GitHub release
         uses: ncipollo/release-action@v1
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.PAT_TOKEN }}
           tag: v${{ env.NEW_VERSION }}
           releaseName: "v${{ env.NEW_VERSION }}"
           draft: false
