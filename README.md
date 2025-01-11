@@ -71,6 +71,44 @@ Replace `LEVEL` with your preferred logging level (`DEBUG`, `INFO`, `WARNING`, `
 one of the supported operations (absences, inbox, message, grades). If querying a specific message,
 include `--message_id ID`.
 
+
+## Docker
+
+To run the Librus Client Application using Docker, follow these steps:
+
+### Build the Docker Image
+
+1. **Build the Docker Image**:
+   Navigate to the project directory and build the Docker image using the following command:
+
+   ```bash
+   docker build -t librus-client .
+   ```
+
+### Run the Docker Container
+
+2. **Run the Docker Container**:
+   Use the following command to run the Docker container, passing the necessary environment variables and command arguments:
+
+   ```bash
+   docker run -e LIBRUS_LOGIN='your_login' -e LIBRUS_PASSWORD='your_password' librus-client --log LEVEL --command COMMAND
+   ```
+
+   Replace `your_login` and `your_password` with your actual Librus credentials. Replace `LEVEL` with your preferred logging level (`DEBUG`, `INFO`, `WARNING`, `ERROR`, `CRITICAL`) and `COMMAND` with one of the supported operations (`absences`, `inbox`, `message`, `grades`). If querying a specific message, include `--message_id ID`.
+
+### Example
+
+To run the application with `INFO` logging level and fetch absences, use:
+
+```bash
+docker run -e LIBRUS_LOGIN='your_login' -e LIBRUS_PASSWORD='your_password' librus-client --log INFO --command absences
+```
+
+### Notes
+
+- Ensure that Docker is installed and running on your machine.
+- The Dockerfile is configured to use the official Python 3.11 slim image and installs dependencies using Poetry.
+
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
