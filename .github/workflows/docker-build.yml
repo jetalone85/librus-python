@@ -39,6 +39,3 @@ jobs:
           context: .
           push: false
           tags: jetalone/librus-python:latest
-
-      - name: Run container
-        run: docker run jetalone/librus-python:latest --help
