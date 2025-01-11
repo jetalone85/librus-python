@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Check out code
         uses: actions/checkout@v3
 
       - name: Set up Python
@@ -22,12 +22,32 @@ jobs:
         run: pip install poetry
 
       - name: Bump version
-        run: poetry version patch
+        run: |
+          poetry version patch
+          NEW_VERSION=$(poetry version -s)
+          
+          echo "New version is $NEW_VERSION" 
+          echo "NEW_VERSION=$NEW_VERSION" >> $GITHUB_ENV
 
       - name: Commit changes
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add pyproject.toml
-          git commit -m 'Bump version'
+          git commit -m "Bump version"
           git push
+
+      - name: Create Git tag
+        run: |
+          git fetch --prune --unshallow || true
+          git tag v${{ env.NEW_VERSION }}
+          git push origin v${{ env.NEW_VERSION }}
+
+      - name: Create GitHub release
+        uses: actions/create-release@v1
+        with:
+          tag_name: v${{ env.NEW_VERSION }}
+          release_name: "v${{ env.NEW_VERSION }}"
+          draft: false
+          prerelease: false
+          body: "Automagic release of version ${{ env.NEW_VERSION }}."
