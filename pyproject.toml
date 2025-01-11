@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "librus-python"
-version = "0.1.9"
+version = "0.1.10"
 description = "This project is a Python-based client application for interacting with the Librus API. It allows users to perform various operations such as retrieving absences, listing inbox messages, fetching specific messages, and getting grades."
 authors = ["Marcin Pyrka <pyrka.marcin@gmail.com>"]
 readme = "README.md"
