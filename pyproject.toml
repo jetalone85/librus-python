@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "librus-python"
-version = "0.1.3"
+version = "0.1.4"
 description = ""
 authors = ["Marcin Pyrka <pyrka.marcin@gmail.com>"]
 readme = "README.md"
